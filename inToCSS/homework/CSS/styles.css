@@ -8,8 +8,16 @@ header{
    
 }
 nav{
+  display: inline-block;
+  width: 80%;
   background: blue;
   color: white;
+}
+nav a{
+  text-decoration: none;
+}
+nav image{
+  width: 10%;
 }
 main{
   background: yellow;
@@ -22,10 +30,12 @@ main{
   align-items: center;
   row-gap: 25px;
 }
+.Grid image{
+  width: 100%;
+}
 .Flex{
   display: flex;
   flex-wrap: wrap;
-  
 }
 img{
   width: 100%
@@ -33,6 +43,13 @@ img{
 footer{
   background: blue
 }
+ul{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
 li{
   list-style: circle;
   padding: 10%;

@@ -46,6 +46,9 @@ main{
   display: flex;
   flex-wrap: wrap;
 }
+.Flex image:nth-child(even){
+  border-radius: 50%;
+}
 img{
   width: 100%
 }

@@ -9,12 +9,18 @@ header{
 }
 nav{
   display: inline-block;
-  width: 80%;
-  background: blue;
+  width: 100%;
+  background: gray;
   color: white;
+  height: 150%px;
 }
 nav a{
   text-decoration: none;
+  color: white;
+}
+nav a:focus {
+  background: yellow;
+  color: blue;
 }
 nav image{
   width: 10%;
@@ -32,6 +38,9 @@ main{
 }
 .Grid image{
   width: 100%;
+}
+.Grid div:nth-child(odd){
+  border-radius: 15%
 }
 .Flex{
   display: flex;

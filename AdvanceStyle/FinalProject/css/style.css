@@ -1,35 +1,108 @@
-html{
+
+html {
     scroll-behavior: smooth;
-}
-body {
-    background-color: #dedede;
-    padding: 5px;
-    margin: 15px;
-    font-size: 25px;
-    font-family:Arial, sans-serif;
 }
 
 h1 {
-    text-align: center;
-    font-family:Arial, sans-serif;
+    text-align: center; 
+    font-family: Arial, sans-serif;
     font-size: 1.95em;
+    margin: 20px 0;    
 }
 
-h2{
-    text-align:center;
-  }
-
-li{
-    margin-top: 20px;
+body {
+    background-color: #dedede;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 0;
 }
 
-img{
-    border: 5px solid blue;
-    border-radius: 35px;
-    width: 100%;
-  }
+main {
+    max-width: 1200px; 
+    margin: 0 auto;    
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;                  
+}
 
-.label{
+figure {
+    border: 2px solid black;
+    background-color: white;
+    margin: 0;
+    padding: 10px;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Tablet View (Trigger at 772px) --- */
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    figure {
+        border-radius: 50%; 
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    figure img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+
+   
+    figure:last-child {
+        grid-column: span 2;
+        border-radius: 50px; 
+    }
+}
+
+/* --- Large Screen View (Trigger at 992px) --- */
+@media screen and (min-width: 992px) {
+    figure {
+        border-radius: 0; 
+    }
+
+    
+    figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+}
+
+/* --- Reduced Motion Media Query --- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto; 
+    }
+}
+
+/* --- Dark Mode Media Query --- */
+@media (prefers-color-scheme: dark) {
+    /* Update the main heading color */
+    h1 {
+        color: #fffacd; 
+    }
+
+  
+    body {
+        background-color: #1a1a1a; 
+        color: #fffacd;           
+    }
+
+    figure {
+        background-color: #333;   
+        color: #fffacd;          
+        border-color: #000;          }
 }
